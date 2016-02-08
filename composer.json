@@ -1,0 +1,26 @@
+{
+    "name": "asimlqt/byng-pimcore-installer",
+    "type": "library",
+    "description": "Byng Pimcore Installer",
+    "keywords": ["byng", "pimcore", "installer"],
+    "homepage": "https://github.com/asimlqt/byng-pimcore-installer",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Asim Liaquat",
+            "email": "asim@byng.co",
+            "homepage": "http://byng.co/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0",
+        "pimcore/pimcore": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {"Byng\\": "src/Byng"}
+    },
+    "scripts": {
+        "post-install-cmd": "Byng\\Composer::postInstall"
+    }
+}
